@@ -40,9 +40,9 @@ export let todosReducer = (state = [], action) => {
           return todo;
         }
       });
-    case 'LOGOUT':
-      console.log('LOGOUT ON ANOTHER REDUCER');
-      return [];
+    // case 'LOGOUT':
+    //   console.log('LOGOUT ON ANOTHER REDUCER');
+    //   return [];
     default:
       return state;
   }
