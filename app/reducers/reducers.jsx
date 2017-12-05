@@ -40,6 +40,9 @@ export let todosReducer = (state = [], action) => {
           return todo;
         }
       });
+    case 'LOGOUT':
+      console.log('LOGOUT ON ANOTHER REDUCER');
+      return [];
     default:
       return state;
   }
@@ -48,9 +51,8 @@ export let todosReducer = (state = [], action) => {
 export let authReducer = (state = {}, action) => {
   switch(action.type) {
     case 'LOGIN':
-      console.log(state);
       return {
-        uid: state.uid
+        uid: action.uid
       };
     case 'LOGOUT':
       return {};
