@@ -3,7 +3,7 @@ let ReactDOM = require('react-dom');
 let {Provider} = require('react-redux');
 let {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
-let TodoApp = require('TodoApp');
+import TodoApp from 'TodoApp';
 let actions = require('actions');
 let store = require('configureStore').configure();
 let TodoAPI = require('TodoAPI');
