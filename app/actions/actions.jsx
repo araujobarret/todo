@@ -82,17 +82,30 @@ export let startToggleTodo = (id, completed) => {
   };
 };
 
+export let login = (uid) => {
+  return {
+    type: 'LOGIN',
+    uid
+  };
+};
+
 export let startLogin = () => {
   return (dispatch, getState) => {
     return firebase.auth().signInWithPopup(githubProvider)
-      .then((result) => console.log('Auth worked', result))
+      .then((result) => console.log(result.user))
       .catch((e) => console.log(e));
+  };
+};
+
+export let logout = () => {
+  return {
+    type: 'LOGOUT'
   };
 };
 
 export let startLogout = () => {
   return (dispatch, getState) => {
     return firebase.auth().signOut()
-      .then(() => console.log('Logged out!'));
+      .then(() => console.log('Logout!')));
   };
 };
