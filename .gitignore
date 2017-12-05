@@ -13,6 +13,6 @@ log.txt
 npm-debug.log*
 
 node_modules/
+public/bundle.js
 
 Thumbs.db
-
