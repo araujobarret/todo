@@ -14,5 +14,6 @@ npm-debug.log*
 
 node_modules/
 public/bundle.js
+config/
 
 Thumbs.db
